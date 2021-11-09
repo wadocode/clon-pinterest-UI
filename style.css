@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* grupo de lado izquierdo */
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.logo {
+  height: 50px;
+}
+.logo img {
+  width: 50px;
+  height: auto;
+  padding: 5px;
+}
+
+.boton-inicio {
+  width: 70px;
+  border-radius: 40px;
+}
+
+.boton-inicio p {
+  font-size: 25px;
+  padding: 5px;
+}
+
+.boton-hoy {
+  width: 70px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: black;
+}
+.boton-hoy p {
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+}
+
+.main-input-container {
+  width: 500px;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #dfe1e5;
+}
+
+.main-input input {
+  width: 500px;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.main-input .search-icon {
+  background-image: url("https://img.icons8.com/android/24/000000/search.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+  padding-right: 10px;
+  margin-left: 20px;
+}
+
+/* grupo de la derecha */
+.right {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  width: 30px;
+  height: 30px;
+}
+
+.main-input {
+  width: 400px;
+}
