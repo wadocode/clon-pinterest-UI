@@ -3,11 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --card_width: 250px;
+  --row_increment: 10px;
+  --card_border_radius: 16px;
+  --card_small: 26;
+  --card_medium: 33;
+  --card_large: 45;
+}
+
+body {
+  font-size: 16px;
+  max-width: 1200px;
+}
 .grid-container {
   display: grid;
-  grid-template-columns: 70% 30%;
-  width: 100%;
-  margin-top: 20px;
+  grid-template-columns: 44rem 18.5rem;
+  padding: 1rem;
+  width: 100vw;
 }
 
 /* grupo de lado izquierdo */
@@ -17,39 +31,35 @@
   align-items: center;
   gap: 10px;
 }
-.logo {
-  height: 50px;
-}
-.logo img {
-  width: 50px;
-  height: auto;
-  padding: 5px;
-}
 
+.logo img {
+  width: 30px;
+  height: 30px;
+}
 .boton-inicio {
-  width: 70px;
+  width: 5rem;
   border-radius: 40px;
 }
 
 .boton-inicio p {
-  font-size: 25px;
+  font-size: 2rem;
   padding: 5px;
 }
 
 .boton-hoy {
-  width: 70px;
-  height: 50px;
+  width: 5rem;
+  height: 3rem;
   border-radius: 40px;
   background-color: black;
 }
 .boton-hoy p {
-  font-size: 25px;
+  font-size: 2rem;
   padding: 5px;
   color: white;
 }
 
 .main-input-container {
-  width: 500px;
+  width: 31rem;
   border-radius: 80px;
   display: flex;
   align-items: center;
@@ -57,7 +67,7 @@
 }
 
 .main-input input {
-  width: 500px;
+  width: 31rem;
   height: 50px;
   outline: none;
   border: none;
@@ -76,19 +86,18 @@
   margin-left: 20px;
 }
 
-/* grupo de la derecha */
+/* grupo de la derecha 
+================*/
 .right {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
 }
-
-.icons {
+.icons img {
   width: 30px;
   height: 30px;
 }
 
-.main-input {
-  width: 400px;
-}
+/* cards with grid 
+====================== */
