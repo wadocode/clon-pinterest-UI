@@ -5,77 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pinterest clon </title>
+  <title>Clon-Pinterest-UI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <!-- contenedor general -->
-    <nav class="grid-container">
+  <header class="header">
+    <nav class="main-nav">
+      <!-- Logo pinterest
+            ====================         -->
 
-      <div class="left">
-        <!--  logo -->
-        <div class="logo">
-          <img class="icons" src="https://cdn.icon-icons.com/icons2/2429/PNG/512/pinterest_logo_icon_147250.png" alt="">
-        </div>
-        <!-- boton inicio -->
-        <div class="boton-inicio">
-          <p>Inicio</p>
-        </div>
-        <!-- boton hoy -->
-        <div class="boton-hoy">
-          <p>Hoy</p>
-        </div>
-        <!-- barra de busqueda -->
-        <div class="main-input">
-          <div class="main-input-container">
-            <span class="search-icon"></span>
-            <input type="text" placeholder="Buscar">
-
-          </div>
-        </div>
+      <div class="logo">
+        <img src="img/Pinterest-logo.png" alt="Pinterest logo">
       </div>
-      <!-- notificaciones -->
-      <div class="right">
-        <div class="notificaciones icons">
-          <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/pinterest_logo_icon_147250.png" alt="">
-        </div>
-        <div class="chat icons">
-          <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/pinterest_logo_icon_147250.png" alt="">
-        </div>
 
-        <div class="profile-photo icons">
-          <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/pinterest_logo_icon_147250.png" alt="">
-        </div>
-        <div class="settings icons">
-          <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/pinterest_logo_icon_147250.png" alt="">
+      <!-- Enlaces a inicio y hoy 
+            ============================-->
+
+      <div class="b-inicio"><a href="#">Inicio</a></div>
+      <div class="b-hoy"><a href="#">Hoy</a></div>
+
+      <!-- Barra de busqueda 
+            ============================ -->
+      <div class="busqueda">
+        <div class="main-input-container">
+          <span class="search-icon"></span>
+          <input type="text" placeholder="Busqueda">
         </div>
       </div>
 
+      <!-- Iconos parte derecha
+            ============================ -->
+      <div class="icons">
+        <a href="#"><img src="img/messages.png" alt="notification"></a>
+        <a href="#"><img src="img/profile.png" alt="Profile"></a>
+        <a href="#"><img src="img/messages.png" alt="Messages"></a>
+        <a href="#"><img src="img/dots.png" alt="Extra Menu"></a>
+      </div>
     </nav>
-  </header>
 
-  <!-- Cards with CSS-GRID
-  ============= -->
-  <div class="pin_container">
-    <div class="card card_small"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_large"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_small"></div>
-    <div class="card card_large"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_small"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_small"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_large"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_small"></div>
-    <div class="card card_medium"></div>
-    <div class="card card_large"></div>
-  </div>
+
+
+
+  </header>
 
 </body>
 
