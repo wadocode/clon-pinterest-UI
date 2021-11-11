@@ -1,15 +1,18 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 /* *,
 *::before,
 *::after {
- box-sizing: border-box;
+  box-sizing: border-box;
 } */
 
 :root {
-  --color-grey: #767676;
+  --hover-contendedor: #dfe1e5;
+  --menu-hover: #dfe1e5;
   --card_width: 250px;
   --row_increment: 10px;
   --card_border_radius: 16px;
@@ -18,60 +21,54 @@
   --card_large: 45;
 }
 
-body {
-  box-sizing: border-box;
+.body {
   width: 100vw;
 }
-
 .header {
   padding: 1rem;
-  width: calc(1rem-100vw);
-  height: 30px;
+  /* display: flex; */
 }
 .main-nav {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 .logo {
-  margin: 5px;
+  margin: 3px;
 }
 .logo img {
   width: 1.7rem;
   height: auto;
 }
 
-.b-inicio {
+.boton {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+.b-inicio {
   width: 4.5rem;
   height: 3rem;
-  border-radius: 40px;
   background-color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
 .b-hoy {
-  width: 4rem;
+  width: 3.5rem;
   height: 3rem;
-  border-radius: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.b-inicio a {
+.boton a {
   font-size: 1rem;
   text-decoration: none;
   padding: 3px;
+}
+.b-inicio a {
   font-weight: bold;
   color: white;
 }
 .b-hoy a {
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 3px;
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
@@ -81,7 +78,6 @@ body {
   width: 70%;
   height: auto;
 }
-
 .main-input-container {
   width: 100%;
   height: 100%;
@@ -116,6 +112,15 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+
+.icons a {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
 .icons img {
   width: 1.5rem;
   height: auto;
@@ -123,39 +128,25 @@ body {
 }
 
 .pin_container {
-  margin: 0;
-  padding: 1rem;
   width: 98vw;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--card_width));
   grid-auto-rows: var(--row_increment);
   justify-content: center;
+  /* justify-items: center; */
 }
 
 .card {
   padding: 0;
   margin: 15px 10px;
   border-radius: var(--card_border_radius);
+  background-color: red;
 }
 
 .card_small {
   grid-row-end: span var(--card_small);
 }
-.card img {
-  border-radius: var(--card_border_radius);
-  width: 100%;
-  height: 100%;
-}
-/* @supports (object-fit: cover) {
-  .card img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-} */
+
 .card_medium {
   grid-row-end: span var(--card_medium);
 }
@@ -163,3 +154,92 @@ body {
 .card_large {
   grid-row-end: span var(--card_large);
 }
+
+.card img {
+  border-radius: var(--card_border_radius);
+  width: 100%;
+  height: 100%;
+}
+
+/* @supports (object-fit: cover) {
+  .card img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+} */
+
+/* .card :hover {
+  cursor: pointer;
+  opacity: 80%;
+  background-color: rgb(0, 0, 0);
+} */
+
+/* boton de opcion - combobox */
+select {
+  outline: 0;
+  border: 0;
+  background: var(--menu-hover);
+  flex: 1;
+  padding: 0 0.3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 40px;
+  color: black;
+}
+.opciones {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+}
+.option {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* line-height: 10px; */
+  background: #178676;
+  /* overflow: hidden; */
+  border-radius: 0.25em;
+  margin-top: 15px;
+}
+
+.select::after {
+  content: "\02C5"; /* entity*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #000000;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+.select:hover::after {
+  color: #23b499;
+}
+.select {
+  display: none;
+}
+/* Aqui inicia los media queries  */
+
+@media (max-width: 848px) {
+  .b-hoy {
+    display: none;
+  }
+  .b-inicio {
+    display: none;
+  }
+  .select {
+    display: flex;
+  }
+}
+
+/* @media (max-width: 848px) {
+  .b-inicio {
+    background-color: --color-botones;
+  }
+} */
